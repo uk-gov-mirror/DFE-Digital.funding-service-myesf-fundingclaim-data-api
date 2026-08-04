@@ -51,7 +51,7 @@ namespace Pds.FundingClaim.Repositories.Tests.Integration
                      SignatureCloseDate = now.AddHours(2),
                      DataCollectionKey = "2000-Final"
                  };
-            _context.FundingClaimWindows.AddRange(new List<FundingClaimWindow> { fundingClaimWindowInPastOne, fundingClaimWindowInPastTwo,  fundingClaimWindowCurrent });
+            _context.FundingClaimWindows.AddRange(new List<FundingClaimWindow> { fundingClaimWindowInPastOne, fundingClaimWindowInPastTwo, fundingClaimWindowCurrent });
             _context.SaveChanges();
 
             var repository = new Repository<FundingClaimWindow>(_context, null);

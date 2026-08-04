@@ -164,10 +164,10 @@ namespace Pds.FundingClaim.Api.Controllers
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         public async Task<IActionResult> UpdateFundingClaimWindow(List<FundingClaimDetails> fundingClaimDetails)
         {
-           await _fundingClaimWindowDataService.UpdateFundingClaimWindow(fundingClaimDetails);
-           _logger.LogInformation("UpdateFundingClaimWindow ran successfully.");
+            await _fundingClaimWindowDataService.UpdateFundingClaimWindow(fundingClaimDetails);
+            _logger.LogInformation("UpdateFundingClaimWindow ran successfully.");
 
-           return Ok();
+            return Ok();
         }
 
         /// <summary>

@@ -1,5 +1,4 @@
 ﻿using AutoMapper;
-using Microsoft.Extensions.Logging;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
 using Pds.Audit.Api.Client.Interfaces;
@@ -1062,11 +1061,11 @@ namespace Pds.FundingClaim.Services.Tests.Unit
 
         private void MockAuditService()
         {
-             mockAuditService = new Mock<IAuditService>();
+            mockAuditService = new Mock<IAuditService>();
 
-             mockAuditService
-                .Setup(e => e.AuditAsync(It.IsAny<AuditModels.Audit>()))
-                .Returns(Task.CompletedTask);
+            mockAuditService
+               .Setup(e => e.AuditAsync(It.IsAny<AuditModels.Audit>()))
+               .Returns(Task.CompletedTask);
         }
 
         private void VerifyWindowDetails(Mock<ILoggerAdapter<FundingClaimDataService>> logger, FundingClaimWindow fundingClaimWindow)

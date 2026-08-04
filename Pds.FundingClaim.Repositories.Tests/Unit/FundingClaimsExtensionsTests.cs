@@ -52,7 +52,7 @@ namespace Pds.FundingClaim.Repositories.Tests.Unit
         [TestMethod, TestCategory("Unit")]
         public void SetTitle_WhenFundingClaimTypeIsYearEndAndPeriodIs1819OrLater_FundingClaimHasExpectedTitle()
         {
-             //arrange
+            //arrange
             var window = new FundingClaimWindow();
 
             var schemaFundingClaim = new SchemaFundingClaim()
@@ -123,7 +123,7 @@ namespace Pds.FundingClaim.Repositories.Tests.Unit
         [TestMethod, TestCategory("Unit")]
         public void SetTitle_WhenFundingClaimPeriodInvalid_ThrowsPeriodWrongFormatException()
         {
-             //arrange
+            //arrange
             var window = new FundingClaimWindow();
 
             var schemaFundingClaim = new SchemaFundingClaim()
